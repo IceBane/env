@@ -25,6 +25,7 @@ set nu
 set tabstop=4
 set shiftwidth=4
 set nowrap
+set directory=~/.vim/swap//
 
 autocmd FileType typescript JsPreTmpl html
 autocmd FileType typescript syn clear foldBraces
