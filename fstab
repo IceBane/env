@@ -1,0 +1,28 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda2 during installation
+UUID=9a5ab68b-8fd5-49d1-bbce-0386da730419 /               ext4    errors=remount-ro 0       1
+# /boot/efi was on /dev/sda1 during installation
+UUID=069A-93E7  /boot/efi       vfat    umask=0077      0       1
+# swap was on /dev/sda3 during installation
+UUID=ed2d55a4-2fdb-49e9-a100-b43c11351f60 none            swap    sw              0       0
+
+#lll_nas documents mount
+192.168.0.112:/volume1/Documents /home/luc/llly_nas/Documents nfs
+#//192.168.0.107/Videos /home/luc/lll_nas/Videos cifs rw,user=luc,vers=3.0,noperm
+#//192.168.0.107/Videos /home/luc/lll_nas/Videos cifs rw,vers=3.0,username=luc,password=w0l3r701,uid=1000,forceuid,wsize=548576
+192.168.0.112:/volume1/Videos /home/luc/llly_nas/Videos nfs
+192.168.0.112:/volume1/Family\040Videos /home/luc/llly_nas/Family\040Videos nfs
+192.168.0.112:/volume1/2298632 /home/luc/llly_nas/2298632 nfs
+192.168.0.112:/volume1/Pictures /home/luc/llly_nas/Pictures nfs
+#//192.168.0.107/Pictures /home/luc/lll_nas/Pictures cifs rw,user=luc,vers=3.0,noperm
+192.168.0.112:/volume1/Music /home/luc/llly_nas/Music nfs
+192.168.0.112:/volume1/Games /home/luc/llly_nas/Games nfs
+192.168.0.112:/volume1/Software /home/luc/llly_nas/Software nfs
+192.168.0.112:/volume1/Crocodile\040Dundee/ /home/luc/llly_nas/Crocodile\040Dundee  nfs
+192.168.0.112:/volume1/Dev /home/luc/llly_nas/dev nfs
